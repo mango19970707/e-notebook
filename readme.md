@@ -4,6 +4,7 @@
 
 - docker
   - [操作docker部署的opengauss数据库和postgres数据库](./docker/操作docker部署的opengauss数据库和postgres数据库.md)
+  - [将静态前端和java后端构建在一个镜像里](./docker/将静态前端和java后端构建在一个镜像里.md)
 
 - k8s
   - [部署k8s集群](./k8s/部署k8s集群.md)
