@@ -17,6 +17,7 @@
 - go
   - [导入私有仓库的包](./go/导入私有仓库的包.md)
   - [channel应用场景总结](./go/channel应用场景总结.md)
+  - [优化GC](./go/优化GC.md)
 
 - python
   - [使用scap构建镜像流量](./python/使用scap构建镜像流量.md)
