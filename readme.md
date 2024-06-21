@@ -18,6 +18,14 @@
   - [导入私有仓库的包](./go/导入私有仓库的包.md)
   - [channel应用场景总结](./go/channel应用场景总结.md)
   - [优化GC](./go/优化GC.md)
+  - [go实现三元运算](./go/go实现三元运算.md)
+  - [将多个错误包装成一个错误](./go/将多个错误包装成一个错误.md)
+  - [使用扩展正则表达式PCRE](./go/使用扩展正则表达式PCRE.md)
+  - [goreplay的简单使用](./go/goreplay的简单使用.md)
+  - [便捷的排序方法](./go/便捷的排序方法.md)
+  - [go的长连接](./go/go的长连接.md)
+  - [封装gorm的CRUD操作](./go/封装gorm的CRUD操作.md)
+  - [go语言json技巧](./go/go语言json技巧.md)
 
 - python
   - [使用scap构建镜像流量](./python/使用scap构建镜像流量.md)
