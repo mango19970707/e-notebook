@@ -10,6 +10,7 @@
   - [部署k8s集群](./k8s/部署k8s集群.md)
   - [集群添加新的节点](./k8s/集群添加新的节点.md)
   - [安装OpenEBS](./k8s/安装OpenEBS.md)
+  - [部署ingress-nginx-controller](./k8s/部署ingress-nginx-controller.md)
 
 - kafka
   - [一个高性能的kafka库 franz-go](./kafka/一个高性能的kafka库%20franz-go.md)
