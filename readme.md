@@ -37,6 +37,7 @@
 
 - clickhouse
   - [clickhouse学习笔记](./clickhouse/clickhouse学习笔记.md)
+  - [将csv文件的数据导入字典](./clickhouse/将csv文件的数据导入字典.md)
 
 - 设计模式
   - [单例模式](./设计模式/单例模式.md)
