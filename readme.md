@@ -14,6 +14,7 @@
 
 - kafka
   - [一个高性能的kafka库 franz-go](./kafka/一个高性能的kafka库%20franz-go.md)
+  - [kafka集群部署](./kafka/kafka集群部署.md)
 
 - go
   - [导入私有仓库的包](./go/导入私有仓库的包.md)
