@@ -195,3 +195,32 @@ print(result["messages"][-1].content)
 4. 关键优化点：文本分割的`chunk_overlap`（避免信息丢失）、检索工具的`k值`（控制返回文本块数量，平衡精度与效率）。
 
 是否需要我针对“生产环境向量库（如PGVector）部署+RAG优化”提供更详细的代码示例？
+
+## 代码补充（来自 PDF）
+用于说明 RAG 流水线的精简代码骨架。
+
+### 示例 1：构建检索工具
+```python
+from langchain.tools.retriever import create_retriever_tool
+
+retriever_tool = create_retriever_tool(
+    retriever=my_vectorstore.as_retriever(search_kwargs={"k": 3}),
+    name="search_docs",
+    description="检索内部知识库",
+)
+```
+
+### 示例 2：RAG 动态提示词
+```python
+from langchain.agents.middleware import dynamic_prompt
+
+@dynamic_prompt
+def rag_prompt(request):
+    return "你是企业知识库助手，回答问题前优先调用 search_docs 检索相关资料。"
+
+agent = create_agent(
+    model="openai:gpt-4.1-mini",
+    tools=[retriever_tool],
+    middleware=[rag_prompt],
+)
+```

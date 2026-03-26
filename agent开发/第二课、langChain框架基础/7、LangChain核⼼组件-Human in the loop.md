@@ -255,3 +255,25 @@ for mode, chunk in agent.stream(
 5. 兼容多工具拦截和流式输出，可无缝融入实际项目的交互流程。
 
 是否需要我针对“生产环境HITL+PostgresSaver持久化”提供更详细的代码示例？
+
+## 代码补充（来自 PDF）
+用于说明 Human in the Loop 控制流程的精简代码骨架。
+
+### 示例 1：为高风险工具启用审批
+```python
+from langchain.agents.middleware import HumanInTheLoopMiddleware
+
+agent = create_agent(
+    model="openai:gpt-4.1-mini",
+    tools=[send_email, delete_record],
+    middleware=[HumanInTheLoopMiddleware(send_email=True, delete_record=True)],
+)
+```
+
+### 示例 2：带 thread_id 调用
+```python
+result = agent.invoke(
+    {"messages": [{"role": "user", "content": "给客户发送本周项目进展邮件"}]},
+    config={"configurable": {"thread_id": "order-1001"}},
+)
+```

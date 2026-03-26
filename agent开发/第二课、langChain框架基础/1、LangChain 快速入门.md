@@ -116,3 +116,29 @@ cd lesson05 && ./run.sh
 4. 复杂任务的设计：场景化工具集、Agent自主任务分解能力
 5. Agent产品化：Flask后端封装、前后端交互、记忆持久化
 6. 核心思想：**LangChain让Agent开发“低代码化”**，无需关注底层推理，只需聚焦工具设计和业务场景，快速实现智能体落地。
+
+## 代码补充（来自 PDF）
+用于快速练习的精简代码骨架。
+
+### 示例 1：基础旅行助手
+```python
+from langchain.agents import create_agent
+from langchain.tools import tool
+
+@tool
+def get_weather(city: str) -> str:
+    """返回城市天气概览。"""
+    return f"{city}: 晴"
+
+agent = create_agent("openai:gpt-4.1-mini", tools=[get_weather])
+print(agent.invoke({"messages": [{"role": "user", "content": "帮我查一下上海今天的天气"}]}))
+```
+
+### 示例 2：流式输出
+```python
+for chunk in agent.stream(
+    {"messages": [{"role": "user", "content": "帮我做一个北京三日游计划"}]},
+    stream_mode="values",
+):
+    print(chunk["messages"][-1].content)
+```

@@ -177,3 +177,34 @@ agent = create_agent(
 5. 中间件是Agent落地生产的必备组件，合理组合可大幅提升系统稳定性和安全性。
 
 是否需要我针对某个中间件（如自定义重试中间件）提供更详细的代码示例？
+
+## 代码补充（来自 PDF）
+用于说明中间件模式的精简代码骨架。
+
+### 示例 1：内置中间件
+```python
+from langchain.agents.middleware import ModelCallLimitMiddleware, ModelFallbackMiddleware
+
+agent = create_agent(
+    model="anthropic:claude-sonnet-4-20250514",
+    tools=[],
+    middleware=[
+        ModelFallbackMiddleware(fallbacks=["openai:gpt-4.1-mini"]),
+        ModelCallLimitMiddleware(run_limit=5, exit_behavior="error"),
+    ],
+)
+```
+
+### 示例 2：自定义重试中间件
+```python
+from langchain.agents.middleware import AgentMiddleware, ModelRequest, ModelResponse
+
+class RetryMiddleware(AgentMiddleware):
+    def wrap_model_call(self, request: ModelRequest, handler) -> ModelResponse:
+        for attempt in range(3):
+            try:
+                return handler(request)
+            except Exception:
+                if attempt == 2:
+                    raise
+```

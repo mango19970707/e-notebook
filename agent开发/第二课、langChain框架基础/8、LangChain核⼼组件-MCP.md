@@ -108,13 +108,13 @@ async def main():
     # 4. 调用Agent使用MCP工具
     # 测试数学工具：(3+5)×12
     math_result = await agent.ainvoke({
-        "messages": [{"role": "user", "content": "What's (3 + 5) x 12?"}]
+        "messages": [{"role": "user", "content": "(3 + 5) × 12 等于多少？"}]
     })
     print("数学结果：", math_result["messages"][-1].content)
 
     # 测试天气工具：查询纽约天气
     weather_result = await agent.ainvoke({
-        "messages": [{"role": "user", "content": "What is the weather in NYC?"}]
+        "messages": [{"role": "user", "content": "纽约现在天气怎么样？"}]
     })
     print("天气结果：", weather_result["messages"][-1].content)
 
@@ -139,3 +139,28 @@ if __name__ == "__main__":
 4. 适用场景：需多应用共享工具、工具需独立部署维护、避免重复开发的场景（如企业内部工具库、第三方工具服务）。
 
 是否需要我针对“真实天气API对接+MCP Server部署”提供更详细的实战代码？
+
+## 代码补充（来自 PDF）
+用于说明 MCP 工具集成的精简代码骨架。
+
+### 示例 1：加载 MCP 工具
+```python
+from langchain_mcp_adapters.client import MultiServerMCPClient
+
+client = MultiServerMCPClient(
+    {
+        "filesystem": {
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:/data"],
+            "transport": "stdio",
+        }
+    }
+)
+tools = client.get_tools()
+```
+
+### 示例 2：使用 MCP 工具创建 Agent
+```python
+agent = create_agent("openai:gpt-4.1-mini", tools=tools)
+result = agent.invoke({"messages": [{"role": "user", "content": "请列出 data 目录下的所有文件"}]})
+```

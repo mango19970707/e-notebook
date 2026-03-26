@@ -171,3 +171,39 @@ strategy = ToolStrategy(
 - 策略选择无需手动干预，LangChain自动适配模型能力；
 - 支持动态格式选择（Union类型）和完善的错误处理，适配复杂业务场景；
 - 下游需消费模型输出（如存库、对接API）时，结构化输出是刚需，能大幅提升开发效率和系统稳定性。
+
+## 代码补充（来自 PDF）
+用于说明结构化输出的精简代码骨架。
+
+### 示例 1：定义 Schema
+```python
+from pydantic import BaseModel, Field
+
+class ContactInfo(BaseModel):
+    name: str = Field(description="姓名")
+    email: str = Field(description="邮箱地址")
+```
+
+### 示例 2：ToolStrategy 策略
+```python
+from langchain.agents.structured_output import ToolStrategy
+
+agent = create_agent(
+    model="openai:gpt-4.1-mini",
+    tools=[],
+    response_format=ToolStrategy(ContactInfo),
+)
+result = agent.invoke({"messages": [{"role": "user", "content": "请提取联系人：张三，邮箱 zhangsan@example.com"}]})
+print(result["structured_response"])
+```
+
+### 示例 3：ProviderStrategy 策略
+```python
+from langchain.agents.structured_output import ProviderStrategy
+
+agent = create_agent(
+    model="openai:gpt-5",
+    tools=[],
+    response_format=ProviderStrategy(ContactInfo),
+)
+```

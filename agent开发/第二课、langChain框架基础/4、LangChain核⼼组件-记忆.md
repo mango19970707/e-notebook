@@ -217,3 +217,42 @@ def update_preference(runtime: ToolRuntime) -> Command:
 4. 自定义状态可扩展Agent存储能力，工具通过`ToolRuntime`访问Store和状态，模型无需感知底层逻辑。
 
 记忆组件的核心价值是让Agent从“单次对话工具”升级为“有上下文感知、能记住用户的智能体”，是实现个性化、高粘性Agent的基础。
+
+## 代码补充（来自 PDF）
+用于说明自定义记忆状态的精简代码骨架。
+
+### 示例 1：自定义状态 Schema
+```python
+from typing import NotRequired
+from langchain.agents import AgentState
+
+class BookingState(AgentState):
+    destination: NotRequired[str]
+    depart_date: NotRequired[str]
+```
+
+### 示例 2：感知状态的中间件
+```python
+from langchain.agents.middleware import before_model
+from langchain_core.messages import SystemMessage
+
+@before_model
+def inject_memory(state: BookingState, runtime):
+    msg = SystemMessage(
+        content=f"已知信息：destination={state.get('destination')}, depart_date={state.get('depart_date')}"
+    )
+    return {"messages": [msg, *state["messages"]]}
+```
+
+### 示例 3：持久化检查点
+```python
+from langgraph.checkpoint.memory import MemorySaver
+
+agent = create_agent(
+    model="openai:gpt-4.1-mini",
+    tools=[],
+    state_schema=BookingState,
+    middleware=[inject_memory],
+    checkpointer=MemorySaver(),
+)
+```
