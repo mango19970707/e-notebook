@@ -1,4 +1,8 @@
 # LangSmith实现Agent可观测性课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\langGraph框架实战\第八课：拆解 Vanna 源码：一个 Text-to-SQL Agent 到底是怎么搭出来的？.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程讲解了LangSmith（LangChain团队出品的可观测性平台）的核心使用方法，通过搭建**维基百科研究助手Agent**，演示如何为Agent接入LangSmith实现全流程追踪，解决Agent运行“黑盒”问题，让其决策、执行、消耗等过程完全透明，同时提供了完整的实操代码和使用技巧。
 
 ## 一、LangSmith核心介绍

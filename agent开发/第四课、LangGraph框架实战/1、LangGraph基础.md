@@ -1,4 +1,8 @@
 # LangGraph 基础课程内容总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\langGraph框架实战\第一课：LangGraph 基础.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程围绕 LangGraph 展开，从基础环境配置到高级应用如多智能体、RAG、网络搜索等进行了全面讲解，核心基于 Python 结合 LangChain 生态，以阿里百炼平台模型为实操基础，以下为精简总结。
 
 ## 一、快速入门

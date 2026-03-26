@@ -1,4 +1,8 @@
 # LangGraph搭建MySQL Agent课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\langGraph框架实战\第六课：手把手教你用 LangGraph 搭建一个 MySQL Agent，让 AI 帮你查数据库.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程讲解了基于LangChain+LangGraph搭建MySQL Agent的完整流程，该Agent可将自然语言问题转化为SQL、执行查询并返回自然语言结果，还具备SQL错误自修复能力，核心为ReAct模式，由Agent自主决定工具调用逻辑。
 
 ## 一、核心能力与架构

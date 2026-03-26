@@ -1,4 +1,8 @@
 # Deep Agents进阶：Skill系统+沙箱课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\deep agent框架实战\第四课：Skill 系统 + 沙箱，Agent 能力上限被拉高了.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程聚焦Deep Agents的两大核心进阶能力——**Skill系统**（提升Agent任务执行专业性与稳定性）和**沙箱（Sandboxes）**（保障Agent代码/命令执行安全），基于`deepagents==0.4.3`（Python3.11+）展开实操讲解，解决Agent“会用工具但不会做事”“执行代码易搞乱环境”的核心痛点，拉高Agent能力上限与安全阈值。
 
 ## 一、Skill系统：Agent的“专业工作手册”

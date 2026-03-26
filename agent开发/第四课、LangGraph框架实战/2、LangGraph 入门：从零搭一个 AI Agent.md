@@ -1,4 +1,8 @@
-# LangGraph 入门课程补充总结（计算器 AI Agent 实战）
+# LangGraph 入门课程总结（计算器 AI Agent 实战）
+
+> 对应原文 PDF：`D:\notebook\agent开发\langGraph框架实战\第二课：LangGraph 入门：从零搭一个 AI Agent.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程以**计算器 Agent**为实操案例，聚焦 LangGraph 核心概念与极简入门流程，采用智谱 glm-5 模型（国产模型兼容 OpenAI 接口），核心是通过“节点+边+状态”实现循环计算逻辑，以下为精简总结。
 
 ## 一、核心价值

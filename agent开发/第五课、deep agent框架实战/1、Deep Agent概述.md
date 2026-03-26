@@ -1,4 +1,8 @@
 # Deep Agents（开源版Claude Code）课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\deep agent框架实战\第一课： Deep Agents，_开源版 Claude Code_.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程讲解了LangChain推出的**Deep Agents**框架（基于`deepagents==0.4.3`，要求Python3.11+），该框架是Claude Code核心能力的开源抽象实现，主打**模型无绑定**，解决了传统LangChain ReAct Agent在复杂任务中**上下文爆炸、不会规划、不会分工**的痛点，让Agent具备“先想再做、拆分任务、分工协作”的深层能力，是搭建生产级复杂任务Agent的核心框架。
 
 ## 一、Deep Agents核心定位与解决的问题

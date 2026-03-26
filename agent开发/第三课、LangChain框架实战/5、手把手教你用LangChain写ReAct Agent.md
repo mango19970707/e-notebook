@@ -1,4 +1,8 @@
-# 手把手教你用LangChain写ReAct Agent核心笔记
+# 手把手教你用LangChain写ReAct Agent课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\langChain框架实战\第五课：手把手教你用LangChain写ReAct Agent.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本文从底层原理到生产级实现，拆解ReAct Agent的构建逻辑，对比传统ReAct Prompt方案与现代Tool Calling方案，帮助理解Agent工具调用的核心机制，掌握可落地的Agent开发方法。
 
 ## 一、ReAct Agent核心认知
@@ -254,5 +258,3 @@ llm_with_tools = llm.bind_tools(tools)  # 后续逻辑完全不变
 2. 优先选择Tool Calling方案：稳定性高、代码简洁、支持并行，是当前Agent开发的主流；
 3. ReAct Prompt仅适用于：模型不支持Tool Calling（如部分开源小模型）、需审计推理过程的场景；
 4. 关键认知：Agent开发的核心是“工具设计+上下文管理+决策逻辑”，LangChain已封装大部分底层细节，无需重复造轮子。
-
-是否需要我针对“多工具并行调用”或“开源模型ReAct Prompt适配”提供更详细的代码示例？当前文件内容过长，豆包只阅读了前 48%。

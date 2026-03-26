@@ -1,4 +1,8 @@
-# LangGraph 文本分析 Pipeline 课程补充总结（实战进阶）
+# LangGraph 文本分析 Pipeline 课程总结（实战进阶）
+
+> 对应原文 PDF：`D:\notebook\agent开发\langGraph框架实战\第三课：手把手教你用 LangGraph 搭建文本分析 Pipeline.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程以**多步骤文本分析 Pipeline**为案例，聚焦 LangGraph 在“结构化流程编排”与“动态路由”的核心应用，实现文本分类、实体提取、摘要生成、情感分析的自动化流转，支持条件分支优化流程效率，以下为精简总结。
 
 ## 一、核心目标

@@ -1,4 +1,8 @@
-# LangGraph 进阶课程补充总结（会“自我纠错”的 RAG Agent）
+# LangGraph 进阶课程总结（会“自我纠错”的 RAG Agent）
+
+> 对应原文 PDF：`D:\notebook\agent开发\langGraph框架实战\第四课：手把手教你用 LangGraph 搭一个会_自我纠错_的 RAG Agent.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程聚焦 **Agentic RAG** 实战，解决普通 RAG “检索结果无关仍硬生成回答”的痛点，通过 LangGraph 实现“决策→检索→评估→改写→重试”的闭环流程，核心基于智谱 glm-5 模型，以下为原文核心内容的精简总结。
 
 ## 一、核心目标

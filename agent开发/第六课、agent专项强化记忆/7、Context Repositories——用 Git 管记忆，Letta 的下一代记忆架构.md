@@ -1,4 +1,8 @@
 # 第七课：Context Repositories——用 Git 管记忆，Letta 的下一代记忆架构 内容总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\agent专项强化记忆\第七课：Context Repositories——用 Git 管记忆，Letta 的下一代记忆架构.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课核心为讲解Letta 2026年2月推出的**Context Repositories（上下文仓库）** 下一代记忆架构，该架构以**文件系统+Git版本管理**为核心，解决了传统Memory Block记忆体系的版本缺失、并发冲突、操作受限等痛点，让Agent通过终端命令自主管理markdown格式的记忆文件，实现记忆的版本追溯、多Agent并行维护和灵活整理。
 
 ## 一、传统Memory Block记忆方案的核心痛点

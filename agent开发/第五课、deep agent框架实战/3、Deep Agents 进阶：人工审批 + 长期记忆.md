@@ -1,4 +1,8 @@
 # Deep Agents进阶：人工审批+长期记忆课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\deep agent框架实战\第三课：Deep Agents 进阶：人工审批 + 长期记忆.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程聚焦Deep Agents的两大核心进阶功能——**人工审批（Human-in-the-Loop）** 和**长期记忆（Longterm Memory）**，基于`deepagents==0.4.3`（Python3.11+）展开实操讲解，解决Agent操作安全性与跨会话记忆丢失问题，是生产级Agent开发的关键能力补充。
 
 ## 一、人工审批（Human-in-the-Loop）：给Agent加“安全绳”

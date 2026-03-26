@@ -1,4 +1,8 @@
 # 第六课：多 Agent 协作——共享记忆、跨 Agent 通信、Group Chat 内容总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\agent专项强化记忆\第六课：多 Agent 协作——共享记忆、跨 Agent 通信、Group Chat.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课核心为基于Letta框架实现**多Agent协作**，解决独立Agent间的信息共享与通信问题，依托Memory Block全局唯一ID实现**跨Agent共享记忆**，并通过**工具通信**和**Group Chat群聊**两种核心方式实现Agent协作，以招聘场景为实战案例，完成“简历评估+自动写邮件”的多Agent自动化流程。
 
 ## 一、跨Agent共享记忆区段

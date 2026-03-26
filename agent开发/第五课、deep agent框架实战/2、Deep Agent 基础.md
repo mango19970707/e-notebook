@@ -1,4 +1,8 @@
 # Deep Agent 基础课程总结
+
+> 对应原文 PDF：`D:\notebook\agent开发\deep agent框架实战\第二课：Deep Agent 基础.pdf`
+> 说明：在不改变原文含义的前提下做精简总结；代码示例保持完整，不删减。
+
 本课程为Deep Agent入门教程，基于LangGraph构建的`deepagents`独立库展开，讲解其核心定位、适用场景、快速上手流程及自定义能力（模型、工具、技能、记忆、沙箱），重点阐释了**规划、上下文管理、子Agent、长期记忆**四大核心能力的底层逻辑与实操方法，是搭建复杂多步骤任务Agent的基础指南。
 
 ## 一、Deep Agent核心概述
