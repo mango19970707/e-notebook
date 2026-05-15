@@ -260,7 +260,7 @@ result = agent.invoke(
     context={"user_role": "专家"},
 )
 ```
-
+g
 ## 五、Streaming（流式输出）
 流式输出用于实时展示 Agent 的思考进度和工具调用过程。
 
